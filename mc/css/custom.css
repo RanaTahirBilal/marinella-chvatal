@@ -258,3 +258,57 @@ html, body { overflow-x: hidden; }
     margin:0;
 }
 body{ background-color:var(--gt-ink-deep); }
+
+/* ============================================================
+   PALETTE REFINEMENT
+   Problem: neutral sections, the accent bands and the cards had all
+   collapsed to nearly the same green, so the page read as one flat
+   field. The section eyebrows were the same green as their own
+   background, making them invisible.
+   Fix: neutral ground goes to a near-black with a faint green cast;
+   the forest green is reserved for the bands so they read as bands.
+   ============================================================ */
+
+/* 1. Neutral ground, not green. */
+body{ background-color:#0F1210 !important; }
+
+/* 2. Bands keep the brand green and now sit against something. */
+.gt-quote.bg-red, .gt-contact.bg-red{
+    background-color:#1E4B3C !important;
+    border-top:1px solid rgba(232,184,122,.28);
+}
+.author-skills.bg-red{ background-color:rgba(15,18,16,.86) !important; }
+
+/* 3. Hero: let the photograph through rather than flooding it. */
+.gt-hero{ background:#0F1210; }
+.gt-hero-media::after{
+    background:linear-gradient(100deg,
+        rgba(15,18,16,.95) 0%,
+        rgba(15,18,16,.86) 30%,
+        rgba(16,34,27,.45) 62%,
+        rgba(20,44,35,.10) 100%);
+}
+
+/* 4. Cards: light glass instead of green on green. */
+.gt-card{
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.09);
+    border-left:3px solid var(--gt-accent);
+}
+.gt-card:hover{
+    background:rgba(255,255,255,.07);
+    border-color:rgba(208,140,74,.4);
+    border-left-color:var(--gt-accent);
+}
+
+/* 5. Carousel scrim follows the neutral ground. */
+.project-sec .project-area .project-img::after{
+    background:linear-gradient(90deg,
+        rgba(15,18,16,.93) 0%,
+        rgba(15,18,16,.80) 28%,
+        rgba(15,18,16,.34) 58%,
+        rgba(15,18,16,0) 88%);
+}
+
+/* 6. Eyebrows were the same green as their background. */
+#about .text-red, .gt-focus .text-red, .heading-area .text-red{ color:var(--gt-accent) !important; }
