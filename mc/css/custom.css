@@ -312,3 +312,20 @@ body{ background-color:#0F1210 !important; }
 
 /* 6. Eyebrows were the same green as their background. */
 #about .text-red, .gt-focus .text-red, .heading-area .text-red{ color:var(--gt-accent) !important; }
+
+/* ---------- enquiry form ---------- */
+.mc-form{ margin-top:22px; }
+.mc-form input, .mc-form textarea{
+  width:100%; margin-bottom:14px; padding:13px 15px;
+  border:1px solid rgba(255,255,255,.26); border-radius:2px;
+  background:rgba(255,255,255,.06); color:#fff;
+  font-family:inherit; font-size:15px;
+  transition:border-color .3s ease, background .3s ease;
+}
+.mc-form input::placeholder, .mc-form textarea::placeholder{ color:rgba(255,255,255,.55); }
+.mc-form textarea{ min-height:118px; resize:vertical; }
+.mc-form input:focus, .mc-form textarea:focus{
+  outline:none; border-color:#D08C4A; background:rgba(255,255,255,.10);
+}
+.mc-form .row > [class*="col-"]{ padding-left:8px; padding-right:8px; }
+.mc-form .row{ margin-left:-8px; margin-right:-8px; }
