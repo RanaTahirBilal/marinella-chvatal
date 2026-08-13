@@ -43,6 +43,7 @@
                  {"@type":"CollegeOrUniversity","name":"Heritage University"},
                  {"@type":"CollegeOrUniversity","name":"Carroll College"}]}
     </script>
+<link rel="icon" type="image/svg+xml" href="vendor/img/favicon.svg">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="90">
@@ -344,14 +345,27 @@
                 <div class="gt-contact-body">
                     <span class="sub-heading alt-font">Contact</span>
                     <h4 class="heading main-font my-3">Enquiries about tutoring.</h4>
-                    <!-- NEEDS CLIENT CONFIRMATION, BLOCKING.
-                         No public email address or telephone number for Resilient Pathways Tutoring
-                         was found in the Marquis placement, so none is invented here. Replace the
-                         href below with her real business email or booking link before this page is
-                         promoted. A tutoring business landing page without a working enquiry route
-                         cannot convert. Do NOT use the builder personal address here. -->
-                    <p class="alt-font gt-contact-note">Resilient Pathways Tutoring works with students in Richland, Washington and remotely. No public contact address is published for the company, so none is invented here. The enquiry route below is awaiting confirmation from Marinella.</p>
-                    <a href="#contact" class="btn btn-medium btn-rounded btn-black mt-3 gt-cta-pending">Contact route pending confirmation</a>
+                    <!-- CONTACT FORM
+                         Resilient Pathways publishes no email or telephone, so nothing is
+                         invented here. Delivery runs through FormSubmit and currently routes
+                         to the builder, who forwards enquiries on. SWAP TARGET: the address
+                         in the form action below is the only place the destination appears.
+                         Replace it with Marinella's own business address when she supplies
+                         one, then send one test message to trigger FormSubmit's activation. -->
+                    <p class="alt-font gt-contact-note">Resilient Pathways Tutoring works with students in Richland, Washington and remotely. Send a message and it reaches her directly.</p>
+                    <form class="mc-form" action="https://formsubmit.co/tahirbilal16@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New tutoring enquiry from the Marinella Chvatal website">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                        <div class="row">
+                            <div class="col-md-6"><input type="text" name="Name" placeholder="Your name" required></div>
+                            <div class="col-md-6"><input type="email" name="Email" placeholder="you@email.com" required></div>
+                            <div class="col-md-12"><input type="text" name="Subject" placeholder="Which student, and what support"></div>
+                            <div class="col-md-12"><textarea name="Message" placeholder="A little about what you are looking for" required></textarea></div>
+                            <div class="col-md-12"><button type="submit" class="btn btn-medium btn-rounded btn-black mt-3">Send enquiry</button></div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
